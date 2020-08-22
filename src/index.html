@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mesto</title>
-  <link rel="stylesheet" href="./pages/index.css">
+  <link rel="stylesheet" href="<%=htmlWebpackPlugin.files.css %>">
 </head>
 
 <body>
   <div class="root">
     <header class="header root__section">
-      <img src="./images/logo.svg" alt="mesto logo" class="logo">
+      <img src="<%=require('./images/logo.svg')%>" alt="mesto logo" class="logo">
     </header>
     <div class="profile root__section">
       <div class="user-info">
@@ -32,7 +32,7 @@
   </div>
   <div class="popup">
     <div class="popup__content">
-      <img src="./images/close.svg" alt="" class="popup__close">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
       <h3 class="popup__title">Новое место</h3>
       <form class="popup__form" name="new">
         <span id="name-error" class="popup__error"></span>
@@ -47,7 +47,7 @@
   </div>
   <div class="popup popup_edit-profile">
     <div class="popup__content">
-      <img src="./images/close.svg" alt="" class="popup__close popup__close_edit-profile">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_edit-profile">
       <h3 class="popup__title">Редактировать профиль</h3>
       <form class="popup__form" name="formProfile">
         <span id="name-error" class="popup__error"></span>
@@ -62,13 +62,13 @@
   </div>
   <div class="popup popup_image">
     <div class="popup__content-image">
-      <img src="./images/close.svg" alt="" class="popup__close popup__close_image">
+      <img src="<%=require('./images/close.svg')%>" alt="" class="popup__close popup__close_image">
       <img src="" alt="" class="popup_img">
     </div>
   </div>
   <div id="avatarEditPopup" class="popup">
     <div class="popup__content">
-      <img id="avatarPopupClose" src="./images/close.svg" alt="" class="popup__close">
+      <img id="avatarPopupClose" src="<%=require('./images/close.svg')%>" alt="" class="popup__close">
       <h3 class="popup__title">Обновть аватар</h3>
       <form class="popup__form" name="formAvatar">
         <span id="avatarLink-error" class="popup__error"></span>
@@ -79,18 +79,8 @@
     </div>
   </div>
 
-  <script src="./scripts/card.js"></script>
-  <script src="./scripts/formValidator.js"></script>
-  <script src="./scripts/popup.js"></script>
-  <script src="./scripts/popupCardAddHandler.js"></script>
-  <script src="./scripts/popupProfileEditHandler.js"></script>
-  <script src="./scripts/popupAvatarEditHandler.js"></script>
-  <script src="./scripts/popupImage.js"></script>
-  <script src="./scripts/userInfo.js"></script>
-  <script src="./scripts/cards.js"></script>
-  <script src="./scripts/api.js"></script>
-  <script src="./scripts/cardList.js"></script>
-  <script src="./scripts/script.js"></script>
+  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+
 </body>
 
 </html>

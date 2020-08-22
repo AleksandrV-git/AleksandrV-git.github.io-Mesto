@@ -1,4 +1,16 @@
 
+import "./pages/index.css";
+import {Popup} from './scripts/popup.js';
+import {PopupImage} from './scripts/popupImage.js';
+import {FormValidator} from './scripts/formValidator.js';
+import {Api} from './scripts/api.js';
+import {UserInfo} from './scripts/userInfo.js';
+import {CardList} from './scripts/cardList.js';
+import {PopupCardAddHandler} from './scripts/popupCardAddHandler.js';
+import {PopupProfileEditHandler} from './scripts/popupProfileEditHandler.js';
+import {PopupAvatarEditHandler} from './scripts/popupAvatarEditHandler.js';
+import {Card} from './scripts/card.js';
+
 'use strict';
 
 
@@ -11,7 +23,7 @@
   };
 
   const userFetchOptions = {
-    baseUrl: 'https://praktikum.tk/cohort11',
+    baseUrl: 'https://nomoreparties.co/cohort11',
     headers: {
       authorization: '9e994c9b-3ee0-4017-bdfe-5cb3911497f0',
       'Content-Type': 'application/json'

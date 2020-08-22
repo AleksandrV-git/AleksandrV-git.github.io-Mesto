@@ -1,4 +1,4 @@
-class PopupCardAddHandler {
+export class PopupCardAddHandler {
   constructor(formCard, popupCardAdd, cardList, ImgZoom, api) {
     this.formCard = formCard;
     this.popupCardAdd = popupCardAdd;

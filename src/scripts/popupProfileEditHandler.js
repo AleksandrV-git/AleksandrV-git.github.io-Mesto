@@ -1,4 +1,4 @@
-class PopupProfileEditHandler {
+export class PopupProfileEditHandler {
   constructor(formProfile, popupEditProfile, userInfo, api) {
     this.formProfile = formProfile;
     this.popupEditProfile = popupEditProfile;
