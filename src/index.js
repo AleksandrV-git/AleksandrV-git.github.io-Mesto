@@ -13,6 +13,7 @@ import {Card} from './scripts/card.js';
 
 'use strict';
 
+const serverUrl = NODE_ENV === 'production' ? 'https://nomoreparties.co' : 'http://nomoreparties.co';
 
 (function () {
 
@@ -23,7 +24,7 @@ import {Card} from './scripts/card.js';
   };
 
   const userFetchOptions = {
-    baseUrl: 'https://nomoreparties.co/cohort11',
+    baseUrl: `${serverUrl}/cohort11`,
     headers: {
       authorization: '9e994c9b-3ee0-4017-bdfe-5cb3911497f0',
       'Content-Type': 'application/json'
