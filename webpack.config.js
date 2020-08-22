@@ -31,7 +31,12 @@ module.exports = {
             test: /\.css$/, // применять это правило только к CSS-файлам
             use: [
                 (isDev ? 'style-loader' : MiniCssExtractPlugin.loader),
-                'css-loader',
+                {
+                    loader: 'css-loader',
+                    options: {
+                        importLoaders: 2
+                    }
+                },
                 'postcss-loader'
             ] // к этим файлам нужно применить пакеты, которые мы уже установили // добавили минификацию CSS
             // в правилах укажите, что если вы собираете в режиме dev, то плагин MiniCssExtractPlugin загружать не нужно. 
@@ -42,10 +47,10 @@ module.exports = {
                 {
                     loader: 'file-loader',
                     options: {
-                      name: './images/[name].[ext]',
-                      esModule: false,
+                        name: './images/[name].[ext]',
+                        esModule: false,
                     }
-                  }, // указали папку, куда складывать изображения
+                }, // указали папку, куда складывать изображения
                 {
                     loader: 'image-webpack-loader',
                     options: {}
