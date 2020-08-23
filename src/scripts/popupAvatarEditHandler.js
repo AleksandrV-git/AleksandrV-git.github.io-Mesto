@@ -1,4 +1,4 @@
-class PopupAvatarEditHandler {
+export class PopupAvatarEditHandler {
     constructor(formAvatar, popupEditAvatar, userInfo, api) {
         this.formAvatar = formAvatar;
         this.popupEditAvatar = popupEditAvatar;
